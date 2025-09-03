@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surat Suara Digital OSIS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">OSIS</div>
+      <div class="meta">
+        <h1>PEMILIHAN KETUA & WAKIL OSIS</h1>
+        <p>Surat Suara Digital</p>
+      </div>
+    </div>
+    <div class="status">
+      <div class="dot"></div>
+      <span>Secure Voting</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="instruction">
+      <h2>Pilih Paslon Favoritmu</h2>
+      <p>Ketuk kartu untuk melihat detail. Tekan <b>Pilih</b> untuk melanjutkan.</p>
+    </section>
+
+    <section id="cards" class="cards"></section>
+
+    <div class="actions">
+      <button id="submitBtn" disabled>Kirim Suara</button>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Konfirmasi Pilihan</h3>
+      <p id="modalText"></p>
+      <div class="modal-actions">
+        <button id="cancelBtn" class="ghost">Batal</button>
+        <button id="confirmBtn" class="primary">Konfirmasi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
